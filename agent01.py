@@ -181,9 +181,16 @@ github_search_agent = Agent(
 )
 
 # Create the Team Agent
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 agent_team = Agent(
     team=[shell_agent, playwright_agent, github_search_agent],
-    model=Gemini(id="gemini-2.0-flash-exp", api_key="AIzaSyB48vuy896DMMBUJZYWURZwdKD-DDHM41U", generative_model_kwargs={}, generation_config={}),
+    model=Gemini(id="gemini-2.0-flash-exp", api_key=GEMINI_API_KEY, generative_model_kwargs={}, generation_config={}),
     tools=[shell_tool, github_search_and_report, reddit_login_tool, summary_tool],
     instructions=[
         "You are a team coordinator. Delegate tasks to the Shell Agent, Playwright Agent, or GitHub Search Agent based on their roles.",
