@@ -173,7 +173,7 @@ playwright_agent = Agent(
 github_search_agent = Agent(
     name="GitHub Search Agent",
     role="Search GitHub repositories and generate reports",
-    model=Gemini(id="gemini-2.0-flash-exp", api_key="AIzaSyA5bfenANZwEDV5vfSWWaFWuX4cD2ejJSQ", generative_model_kwargs={}, generation_config={}),
+    model=Gemini(id="gemini-2.0-flash-exp", api_key=GEMINI_API_KEY, generative_model_kwargs={}, generation_config={}),
     tools=[github_search_and_report],
     instructions="Search GitHub repositories based on a topic and generate a report with the results.",
     show_tool_calls=True,
