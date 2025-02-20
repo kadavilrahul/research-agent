@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+.env
+
+
+node_modules/
+.DS_Store
+.venv/
+.venv
+.venv

@@ -1,0 +1,8 @@
+agno
+langchain_google_genai
+playwright
+requests
+beautifulsoup4
+lxml
+google-genai
+python-dotenv
